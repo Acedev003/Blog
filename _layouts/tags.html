@@ -25,7 +25,7 @@
                   <div class="posts_under_tag">
                     <br>
                     {% for post in site.tags[tag] %}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{post.date | date: "%Y-%b-%d"}}  <a href="{{ post.url }}">{{ post.title }}</a><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{post.date | date: "%Y-%b-%d"}}  <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
                     {% endfor %}
                     <br>
                   </div>  

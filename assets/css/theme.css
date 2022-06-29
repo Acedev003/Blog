@@ -1,0 +1,55 @@
+html,body
+{
+    color: #cdcdcd;
+    background-color: #090909;
+    font-family: monospace;
+    font-size: large;
+}
+
+a, a:visited, a:hover, a:active 
+{
+    color: #00bbbb;
+}
+
+
+input 
+{
+    display: none;
+}
+
+input + label + .posts_under_tag 
+{
+    display: none;
+}
+
+input:checked + label + .posts_under_tag 
+{
+    display: block;
+}
+
+label
+{
+    transition: ease .5s;
+}
+label:hover 
+{
+    background: #4E8774;
+}
+
+
+.term
+{
+    color: #cdcdcd;
+}
+
+.term::before
+{
+    color: #55ff55;
+    content: "$ ";
+}
+
+.term::after
+{
+    content: "\a";
+}
+

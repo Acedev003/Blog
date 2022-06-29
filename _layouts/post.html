@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Acedev's Random Bytes - {{page.title}}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="term">Loading post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{page.title}}</div>
+    <div class="term">Post uploaded on : {{page.date | date: "%Y-%b-%d" }}</div>
+    <div class="term">Printing</div>
+    <br>
+    {{content}}
+    <br>
+    <div class="term">End post</div>
+  </body>
+</html>

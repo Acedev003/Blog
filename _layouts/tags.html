@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Acedev's Random Bytes</title>
+    <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+  </head>
+  <body>
+    {% assign tagstr = "" %}
+    {% for post in site.posts %}
+    {% assign taglist = taglist | concat: post.tags | uniq%}
+    {% endfor %}
+    
+    <div class="term">Loading taglist</div>
+    <div class="term">{{ site.tags | size }} tags found.</div>
+    <div class="term">Listing</div>
+
+    <table style="padding: 15px;">
+        {% for tag in taglist %}
+            <tr>
+                <td>
+                  <input type="checkbox" id="{{tag}}"/>
+                  <label for="{{tag}}"><u>{{tag}}</u></label>
+                  <div class="posts_under_tag">
+                    <br>
+                    {% for post in site.tags[tag] %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{post.date | date: "%Y-%b-%d"}}  <a href="{{ post.url }}">{{ post.title }}</a><br>
+                    {% endfor %}
+                    <br>
+                  </div>  
+                </td>
+                <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;[{{site.tags[tag] | size}} posts]</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="term">End</div>
+
+  </body>
+</html>

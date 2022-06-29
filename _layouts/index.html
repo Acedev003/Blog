@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Acedev's Random Bytes</title>
+    <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="term">Initializing blog</div>
+    <div class="term">Login at <span style="color: #b052da;">{{ site.time }}</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div>
+    <div class="term">Logging intro</div>
+    <br>
+    A place to remind myself and help others with those new things I learn and come across daily. <br>
+    Visit <a href="https://acedev003.github.io">acedev003.github.io</a> to view my random experiments. <br>
+    Other links: 
+    <ul>
+      <li><a target="_blank" href="https://github.com/Acedev003" >Github</a></li>
+      <li><a target="_blank" href="https://www.reddit.com/user/Acedev003">Reddit</a></li>
+      <li><a target="_blank" href="https://twitter.com/Acedev003">Twitter</a></li>
+    </ul>
+    <br>
+    <div class="term">Loading site tags</div>
+    <div class="term">{{ site.tags | size }} tags found. [ Check all tags <a href="/tags">here</a> ]</div>
+    <div class="term">Loading posts</div>
+    <div class="term">{{ site.posts | size }} posts loaded</div>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          {{post.date | date: "%Y-%b-%d"}}  <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <script>
+      document.getElementById("useragent").innerText = navigator.userAgent;
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="term">Initializing blog</div>
-    <div class="term">Login at <span style="color: #b052da;">{{ site.time }}</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div>
+    <div class="term">Login at <span id ="time" style="color: #b052da;">unknown</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div>
     <div class="term">Logging intro</div>
     <br>
     A place to remind myself and help others with those new things I learn and come across daily. <br>
@@ -33,6 +33,7 @@
     </ul>
     <script>
       document.getElementById("useragent").innerText = navigator.userAgent;
+      document.getElementById("time").innerText      = new Date().toTimeString();
     </script>
   </body>
 </html>

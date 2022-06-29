@@ -21,7 +21,7 @@
     </ul>
     <br>
     <div class="term">Loading site tags</div>
-    <div class="term">{{ site.tags | size }} tags found. [ Check all tags <a href="/tags">here</a> ]</div>
+    <div class="term">{{ site.tags | size }} tags found. [ Check all tags <a href="{{ "/tags" | relative_url }}">here</a> ]</div>
     <div class="term">Loading posts</div>
     <div class="term">{{ site.posts | size }} posts loaded</div>
     <ul>

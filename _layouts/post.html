@@ -5,14 +5,22 @@
     <meta charset="utf-8">
     <title>Acedev's Random Bytes - {{page.title}}</title>
     <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+    <script src="{{ "/assets/js/typed.js" | relative_url }}"></script>
   </head>
   <body>
-    <div class="term">Loading post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{page.title}}</div>
-    <div class="term">Post uploaded on : {{page.date | date: "%Y-%b-%d" }}</div>
+    <div class="term" data-typing-effect><div>Loading post: {{page.title}}</div></div>
+    <div class="term"><div>Uploaded on  : {{page.date | date: "%Y-%b-%d" }}</div></div>
     <div class="term">Printing</div>
-    <br>
-    {{content}}
-    <br>
-    <div class="term">End post</div>
+    <div class="hidden" id="post">
+      <br>
+      {{content}}
+      <br>
+      <div class="term">End post</div>
+    </div>
+    <script>
+      typingEffect(Array.from(document.getElementsByClassName("term")),{speed:10}).then(()=>{
+        document.getElementById("post").style.visibility = "visible";
+      });
+    </script>
   </body>
 </html>

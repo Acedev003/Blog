@@ -37,19 +37,25 @@ label:hover
 }
 
 
-.term
+.term,.term2
 {
     color: #cdcdcd;
+    display: flex;
 }
 
-.term::before
+.term::before,.term2::before
 {
     color: #55ff55;
     content: "$ ";
+    padding-right: 5px;
 }
 
-.term::after
+[data-typing-effect] {
+    visibility: hidden;
+}
+
+
+.hidden
 {
-    content: "\a";
+    visibility: hidden;
 }
-

@@ -65,8 +65,18 @@ img
     border-style: double;
     border-color: #55ff55;
     padding: 10px;
-    max-width: 90%;
+    max-width: 95%;
     max-height: 200px;
+    margin: auto;
+}
+
+img.lg
+{
+    border-style: double;
+    border-color: #55ff55;
+    padding: 10px;
+    max-width: 95%;
+    max-height: 350px;
     margin: auto;
 }
 
@@ -87,4 +97,9 @@ img
     text-align:start;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+
+hr
+{
+    border-color: #b052da;
 }

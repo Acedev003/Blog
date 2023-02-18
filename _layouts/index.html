@@ -9,9 +9,9 @@
     <script src="{{ "/assets/js/typed.js" | relative_url }}"></script>
   </head>
   <body>
-    <div class="term" data-typing-effect><div>Initializing blog</div></div>
-    <div class="term" data-typing-effect><div>Login at <span id ="time" style="color: #b052da;">unknown</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div></div>
-    <div class="term" data-typing-effect><div>Logging intro</div></div>
+    <div class="term" data-typing-effect><div>Initializing blog</div></div><br>
+    <div class="term" data-typing-effect><div>Login at <span id ="time" style="color: #b052da;">unknown</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div></div><br>
+    <div class="term" data-typing-effect><div>Logging intro</div></div><br>
     <div class="hidden" id="intro">
       <br>
       A place to remind myself and help others with those new things I learn and come across daily. <br>
@@ -24,15 +24,15 @@
       </ul>
       <br>
     </div>
-    <div class="term2" data-typing-effect><div>Loading site tags</div></div>
-    <div class="term2" data-typing-effect><div>{{ site.tags | size }} tags found. [ Check all tags <a href="{{ "/tags" | relative_url }}">here</a> ]</div></div>
-    <div class="term2" data-typing-effect><div>Loading posts</div></div>
-    <div class="term2" data-typing-effect><div>{{ site.posts | size }} posts loaded</div></div>
+    <div class="term2" data-typing-effect><div>Loading site tags</div></div><br>
+    <div class="term2" data-typing-effect><div>{{ site.tags | size }} tags found. [View <a href="{{ "/tags" | relative_url }}">here</a>]</div></div><br>
+    <div class="term2" data-typing-effect><div>Loading posts</div></div><br>
+    <div class="term2" data-typing-effect><div>{{ site.posts | size }} posts loaded</div></div><br>
     <div class="hidden" id="posts">
       <ul>
         {% for post in site.posts %}
         <li>
-          {{post.date | date: "%Y-%b-%d"}} <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <p>{{post.date | date: "%Y-%b-%d"}}<br> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
         </li>
         {% endfor %}
       </ul>
@@ -48,6 +48,8 @@
           document.getElementById("posts").style.visibility = "visible";
         });
       });
+
+
     </script>
   </body>
 </html>

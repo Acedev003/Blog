@@ -3,7 +3,7 @@ html,body
     color: #cdcdcd;
     background-color: #090909;
     font-family: monospace;
-    font-size: large;
+    font-size: larger;
 }
 
 a, a:visited, a:hover, a:active 
@@ -40,7 +40,7 @@ label:hover
 .term,.term2
 {
     color: #cdcdcd;
-    display: flex;
+    display: inline-flex;
 }
 
 .term::before,.term2::before
@@ -54,7 +54,6 @@ label:hover
     visibility: hidden;
 }
 
-
 .hidden
 {
     visibility: hidden;
@@ -66,7 +65,8 @@ img
     border-style: double;
     border-color: #55ff55;
     padding: 10px;
-    max-width: 500px;
+    max-width: 90%;
+    max-height: 200px;
     margin: auto;
 }
 
@@ -84,5 +84,7 @@ img
 
 .post_parent
 {
-    text-align: justify;
+    text-align:start;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }

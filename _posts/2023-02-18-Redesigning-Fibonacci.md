@@ -33,7 +33,7 @@ This formula looks similiar to that of the original definition of fibonacci numb
 
 <div class="img_parent"><b>T(n) &ge; Fib(n)</b></div>
 
-We all know that fibonacci numbers grow exponentially in a constant &phi;, where &phi; equals (1+&radic;5)/2 which approximates to 1.61803 (aka the golden ratio). The worrying part is the fact that our algorithm is exponential in time complexity which makes it very slow. To put things into perspective lets plot the execution time of <i>fib1(n)</i> for increasing values of n.
+We all know that fibonacci numbers grow exponentially in a constant &phi;, where &phi; equals (1+&radic;5)/2 which approximates to 1.61803 (aka the golden ratio). This is bad because our algorithm is now exponential in time complexity which makes it very slow. To put things into perspective lets plot the execution time of <i>fib1(n)</i> for increasing values of n.
 
 <div class="img_parent">
 <img src="{{ "assets/images/2023-02-18-Redesigning-Fibonacci/fib1plot.png" | relative_url }}">

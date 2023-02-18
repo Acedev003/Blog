@@ -11,12 +11,14 @@
     <div class="term" data-typing-effect><div>Loading post: {{page.title}}</div></div>
     <div class="term"><div>Uploaded on  : {{page.date | date: "%Y-%b-%d" }}</div></div>
     <div class="term">Printing</div>
-    <div class="hidden" id="post">
-      <br>
-      {{content}}
-      <br>
-      <div class="term">End post</div>
+    <div class="post_parent">
+      <div class="hidden post" id="post">
+        <br>
+        {{content}}
+        <br>
+      </div>
     </div>
+    <div class="term">End post</div>  
     <script>
       typingEffect(Array.from(document.getElementsByClassName("term")),{speed:10}).then(()=>{
         document.getElementById("post").style.visibility = "visible";

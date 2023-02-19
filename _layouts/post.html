@@ -9,8 +9,8 @@
   </head>
   <body>
     <div class="term" data-typing-effect><div>Loading post: <p style="color: #d9bd26;"> {{page.title}}</p></div></div><br>
-    <div class="term"><div>Uploaded on  : {{page.date | date: "%Y-%b-%d" }}</div></div><br>
-    <div class="term">Printing</div>
+    <div class="term" data-typing-effect><div>Uploaded on  : {{page.date | date: "%Y-%b-%d" }}</div></div><br>
+    <div class="term" data-typing-effect>Printing</div>
     <div class="post_parent">
       <div class="hidden post" id="post">
         <br>
@@ -18,10 +18,48 @@
         <br>
       </div>
     </div>
-    <div class="term">End post</div>  
+    <div class="term2" data-typing-effect>End post</div> <br>
+    <div class="term2" data-typing-effect>
+      Other links
+    </div>
+    <div id="other_links" style="visibility: hidden;">
+      <ul>
+        <li> 
+            {% for post in site.posts %}
+              {% if post.url == page.url %}
+                {% assign prev_index = forloop.index0 | plus:1 %}
+                {% assign next_index = forloop.index0 | minus:1 %}
+                
+                {% if forloop.last %}
+                &nbsp;<a href="/Blog/" class="nu">Home</a>&nbsp;
+                  <a href="{{site.posts[next_index].url | relative_url}}" class="nu">Next&gt;</a>
+                {% elsif forloop.first %}
+                  <a href="{{site.posts[prev_index].url | relative_url}}" class="nu">&lt;Prev</a>
+                  &nbsp;<a href="/Blog/" class="nu">Home</a>&nbsp;
+                {% else %}
+                <a href="{{site.posts[prev_index].url | relative_url}}" class="nu">&lt;Prev</a>
+                &nbsp;<a href="/Blog/" class="nu">Home</a>&nbsp;
+                <a href="{{site.posts[next_index].url | relative_url}}" class="nu">Next&gt;</a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+        </li>
+        <br>
+        <li>
+          <a href="https://github.com/acedev003">Github</a> |
+          <a href="https://twitter.com/acedev003">Twitter</a> |
+          <a href="https://in.linkedin.com/in/acedev003">LinkedIn</a>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </div>
     <script>
       typingEffect(Array.from(document.getElementsByClassName("term")),{speed:10}).then(()=>{
         document.getElementById("post").style.visibility = "visible";
+        typingEffect(Array.from(document.getElementsByClassName("term2")),{speed:10}).then(()=>{
+          document.getElementById("other_links").style.visibility = "visible";
+        });
       });
     </script>
   </body>

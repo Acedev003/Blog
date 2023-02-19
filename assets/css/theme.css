@@ -11,6 +11,12 @@ a, a:visited, a:hover, a:active
     color: #00bbbb;
 }
 
+a.nu, a.nu:visited, a.nu:hover, a.nu:active 
+{
+    color: #00bbbb;
+    text-decoration: none;
+}
+
 
 input 
 {

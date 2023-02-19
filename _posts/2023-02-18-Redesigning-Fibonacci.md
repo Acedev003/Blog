@@ -69,7 +69,7 @@ We can see that the base case (lines 2-6) take up O(1) in time complexity. The f
 <img src="{{ "assets/images/2023-02-18-Redesigning-Fibonacci/fib2plot.png" | relative_url }}">
 </div>
 
-We can see an almost linear plot in the above figure. Also note that computing the 40th fibonacci number takes around 8x10<sup>-6</sup> seconds whereas the initial recursive implementation took 40 seconds for the same value of n - a very huge leap in performance.
+We can see an almost linear plot in the above figure. Also note that computing the 40th fibonacci number takes around 8x10<sup>-6</sup> seconds whereas the initial recursive implementation took 40 seconds for the same value of n, a very huge leap in performance.
 
 
 This is a great example of how minor changes in perspective of how code is implemented can bring significant benefits in terms of performance.

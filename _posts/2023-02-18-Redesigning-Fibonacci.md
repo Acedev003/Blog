@@ -5,7 +5,7 @@ description:
 tags: algorithms dynamic-programming perspectives-and-code
 ---
 
-Among the first few coding challenges a newbie goes through is that of computing the Fibonacci Sequence. At a glance, this absurdly random question does not appear to offer any real world solutions, apart from the fact that it's used to demonstrate the concepts of recursion to new programmers.
+Among the first few coding challenges a newbie comes across is that of computing the Fibonacci Sequence. At a glance, this absurdly random question does not appear to offer any real world solutions, apart from the fact that it's used to demonstrate the concepts of recursion to new programmers.
 
 
 A good use-case of the Fibonacci sequence that is not so popular is to explain concepts of algorithmic complexity. So, lets begin by looking at the definition of the so called sequence.
@@ -72,4 +72,4 @@ We can see that the base case (lines 2-6) take up O(1) in time complexity. The f
 We can see an almost linear plot in the above figure. Also note that computing the 40th fibonacci number takes around 8x10<sup>-6</sup> seconds whereas the initial recursive implementation took 40 seconds for the same value of n - a very huge leap in performance.
 
 
-This is a great example of how minor changes in the perspective of how code is implemented can bring significant benefits in terms of performance.
+This is a great example of how minor changes in perspective of how code is implemented can bring significant benefits in terms of performance.

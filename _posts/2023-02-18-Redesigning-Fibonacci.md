@@ -73,3 +73,10 @@ We can see an almost linear plot in the above figure. Also note that computing t
 
 
 This is a great example of how minor changes in perspective of how code is implemented can bring significant benefits in terms of performance.
+
+
+<hr>
+
+<small>
+This post was inspired by Module-1 of Udacity's <a href="https://learn.udacity.com/courses/ud401">Intro to Graduate Algorithms Course</a>
+</small>

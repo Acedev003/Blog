@@ -5,7 +5,7 @@ description:
 tags: algorithms dynamic-programming perspectives-and-code
 ---
 
-Among the first few coding challenges a newbie comes across is that of computing the Fibonacci Sequence. At a glance, this absurdly random question does not appear to offer any real world solutions, apart from the fact that it's used to demonstrate the concepts of recursion to new programmers.
+Among the first few coding challenges a newbie comes across is that of computing the Fibonacci Sequence. At a glance, this absurdly random question does not appear to offer any real world use case (<a href="https://codinghero.ai/the-fibonacci-series-and-its-amazing-applications/amp/">despite it's importance</a>), apart from the fact that it's used to demonstrate the concepts of recursion to new programmers.
 
 
 A good use-case of the Fibonacci sequence that is not so popular is to explain concepts of algorithmic complexity. So, lets begin by looking at the definition of the so called sequence.

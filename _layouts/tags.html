@@ -12,9 +12,9 @@
     {% assign taglist = taglist | concat: post.tags | uniq%}
     {% endfor %}
     
-    <div class="term">Loading taglist</div>
-    <div class="term">{{ site.tags | size }} tags found.</div>
-    <div class="term">Listing</div>
+    <div class="term">Loading taglist</div><br>
+    <div class="term">{{ site.tags | size }} tags found.</div><br>
+    <div class="term">Listing</div><br>
 
     <table style="padding: 15px;">
         {% for tag in taglist %}

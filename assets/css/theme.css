@@ -109,3 +109,9 @@ hr
 {
     border-color: #b052da;
 }
+
+p
+{
+    text-align:justify;
+    line-height: 1.7em;
+}
